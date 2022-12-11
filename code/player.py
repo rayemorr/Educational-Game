@@ -1,10 +1,14 @@
-import random
+# Group 3 Assignment 
+# Date module created: 12-03-22
+# updated: 12-11-22
 
+# imported modules
+import random
 import pygame
 from settings import *
 from support import *
 
-
+# class player to initiate player and moves
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, group):
         super().__init__(group)
@@ -29,6 +33,7 @@ class Player(pygame.sprite.Sprite):
         self.curr_y = self.pos.y
         self.moves = 0
 
+    # define moves that are permitted in the game movement
     def import_assets(self):
         self.animations = {'up': [], 'down': [], 'left': [], 'right': [],
                            'up_idle': [], 'down_idle': [], 'left_idle': [], 'right_idle': []}
@@ -38,6 +43,7 @@ class Player(pygame.sprite.Sprite):
             self.animations[animation] = import_folder(full_path)
         print(self.animations)
 
+    # animation frame
     def animate(self, dt):
         self.frame_index += 4 * dt
         if self.frame_index >= len(self.animations[self.status]):
@@ -71,6 +77,7 @@ class Player(pygame.sprite.Sprite):
         if self.direction.magnitude() == 0:
             self.status = self.status.split('_')[0] + '_idle'
 
+     # random animation method
     def move_randomly(self, dt):
         self.time_elapsed += dt
 
