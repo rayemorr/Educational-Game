@@ -24,7 +24,6 @@ class Level:
 
         self.menu = Menu()  # create the menu that the player will navigate through to start the game
 
-        #self.grid = False  # set to true when
         self.all_found = False  # set to true once all players are found
         self.reinit = reinit  # if the user exits to the main menu, the game will be reinitialized so this is set to
                               # true; used to reset the level before updating the menu

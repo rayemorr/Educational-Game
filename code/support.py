@@ -1,5 +1,5 @@
 # file: support.py
-# supports file imports for importing player graphics
+# purpose: supports file imports for importing player graphics
 
 from os import walk
 import pygame

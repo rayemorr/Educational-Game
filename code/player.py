@@ -1,5 +1,5 @@
 # file: player.py
-# purpose: represents a player that will randomly walk around the grid, staying within the grids boundaries, until
+# purpose: represents a player that will randomly walk around the grid, staying within the grid's boundaries, until
 #          all players are found
 
 import random
@@ -42,7 +42,6 @@ class Player(pygame.sprite.Sprite):
 
         self.found = False  # True when the player has found at least one other player
         self.stop_moving = False  # True when a player is found and not leading another player
-        #self.updated = False # True when
         self.lead = False  # True when a player finds another player, and they have the lower number
 
         self.selected_protocol = 'random'  # what the player's current wandering protocol is
